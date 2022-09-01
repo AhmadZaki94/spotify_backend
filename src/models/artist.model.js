@@ -5,6 +5,7 @@ const artistSchema = new mongoose.Schema(
     name: { type: String, required: true },
     dob: { type: String, required: true },
     bio: { type: String, required: true },
+    song_name: [{ type: String }],
   },
   {
     versionKey: false,
@@ -12,6 +13,4 @@ const artistSchema = new mongoose.Schema(
   }
 );
 
-
 module.exports = mongoose.model("artist", artistSchema);
-
